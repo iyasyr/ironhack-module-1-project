@@ -1,0 +1,293 @@
+:root {
+  --Primary: #072ac8;
+  --PrimaryLight: #a2d6f9;
+  --PrimaryLighter: #d1edff;
+  --SecondaryLight: #fce300;
+  --SecondaryDark: #ffc600;
+  --NeutralLight: #f4f6fc;
+  --NeutralMedium: #6b708d;
+  --NeutralDark: #292e47;
+  --DefaultText: #514D67;
+  --Wrong: #b33a3a;
+  --Right: #28a428;
+  --White: #fff;
+  --Black: #000;
+  --Background: #F2F4FC;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--Background);
+  color: var(--DefaultText);
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+}
+
+section {
+  margin-bottom: 150px !important;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--NeutralMedium);
+  font-weight: bold;
+}
+
+
+/* Headings */
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--NeutralDark);
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 20px;
+  color: var(--NeutralDark);
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+/* Body Intro Text */
+p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* larger intro text as the first paragraph */
+p.intro,
+p:first-of-type {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Headline text—use <strong> or <b> for medium weight if needed */
+.headline {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.headline.medium {
+  font-weight: 500;
+}
+
+/* Captions—use <small> and <span> */
+small {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.caption2 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .hero h3 {
+    font-size: 24px;
+  }
+}
+
+.navbar {
+  font-size: 18px;
+  margin: 20px 0 0 0;
+
+  padding-bottom: 10px;
+  width: 90%;
+}
+
+.navbar * {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  margin-left: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .logo {
+    position: static;
+    margin-left: 90px;
+  }
+}
+
+.main-nav {
+  display: none;
+
+  list-style-type: none;
+  color: var(--NeutralMedium);
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.menu-item {
+  text-decoration: none;
+  margin-left: 40px;
+  font-weight: bold;
+  color: var(--Primary);
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.blue-button {
+  background-color: var(--Primary);
+  color: var(--White);
+  padding: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.blue-button:hover {
+  color: var(--SecondaryDark);
+}
+
+/* Common Classes */
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+/* Hero Section */
+.hero {
+  margin: 60px auto;
+  max-width: 85%;
+}
+
+.hero-content {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+
+  .hero {
+    display: flex;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+}
+
+.hero-content-buttons {
+  margin: 0;
+}
+
+.hero-content-buttons a {
+  padding: 15px;
+}
+
+.hero-images {
+  position: relative;
+}
+
+.img-hero {
+  width: 600px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+  .img-hero {
+    width: 900px;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-hero {
+    width: 800px;
+  }
+}
+
+.img-card {
+  max-width: 250px;
+  position: absolute;
+  top: 0%;
+  left: -15%;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+
+@media (min-width: 768px) and (max-width: 1500px) {
+  .img-card {
+    max-width: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-card {
+    display: inline-block;
+  }
+}
+
+
+.img-card-bottom {
+  top: auto;
+  left: auto;
+  right: -15%;
+  bottom: -15%;
+}
