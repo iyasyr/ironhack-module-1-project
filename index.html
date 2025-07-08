@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./css/style.css" />
   <script type="module" src="./js/script.js" defer></script>
   <script src="./js/navbar.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -51,6 +54,212 @@
       <img class="img-client" src="./assets/logos/amazon-logo.svg" alt="amazon logo">
     </a>
   </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="recent-projects">
+    <h2 class="section-title capitalize">Recent projects</h2>
+    <div class="projects-container">
+      <article class="project-card"><a class="project-wrapper" href="./pages/projects.html?id=1"><img
+            class="img-project" src="https://github.com/ironhack-jc/mid-term-api/blob/main/1.jpg?raw=true"
+            alt="Simplify">
+          <div class="project-inner-card">
+            <h4 class="project-title">Simplify</h4>
+            <p class="project-description capitalize">UI Design &amp; App Development</p><a class="learn-more"
+              href="./pages/projects.html?id=1">Learn more</a>
+          </div>
+        </a></article>
+      <article class="project-card"><a class="project-wrapper" href="./pages/projects.html?id=2"><img
+            class="img-project" src="https://github.com/ironhack-jc/mid-term-api/blob/main/2.jpg?raw=true"
+            alt="Dashcoin">
+          <div class="project-inner-card">
+            <h4 class="project-title">Dashcoin</h4>
+            <p class="project-description capitalize">Web Development</p><a class="learn-more"
+              href="./pages/projects.html?id=2">Learn more</a>
+          </div>
+        </a></article>
+      <article class="project-card"><a class="project-wrapper" href="./pages/projects.html?id=3"><img
+            class="img-project" src="https://github.com/ironhack-jc/mid-term-api/blob/main/3.jpg?raw=true"
+            alt="Vectorify">
+          <div class="project-inner-card">
+            <h4 class="project-title">Vectorify</h4>
+            <p class="project-description capitalize">User Experience Design</p><a class="learn-more"
+              href="./pages/projects.html?id=3">Learn more</a>
+          </div>
+        </a></article>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial">
+    <div class="testimonial-memojis">
+      <img class="testimonial-memoji1" src="./assets/testimonial-section/memoji-1.png" alt="Memoji 1">
+      <img class="testimonial-memoji2" src="./assets/testimonial-section/memoji-2.png" alt="Memoji 2">
+      <img class="testimonial-memoji3" src="./assets/testimonial-section/memoji-3.png" alt="Memoji 3">
+      <img class="testimonial-memoji4" src="./assets/testimonial-section/memoji-4.png" alt="Memoji 4">
+    </div>
+    <div class="testimonial-text">
+      <h3 class="capitalize">Hear what our clients have to say</h3>
+      <p>
+        "Circle helped us through every stage of our startup.
+        <br>
+        We really enjoyed working with you."
+      </p>
+    </div>
+    <div class="testimonial-profile">
+      <img class="testimonial-profile-img" src="./assets/testimonial-section/profile.png"
+        alt="Kristin Watson profile image">
+      <div class="testimonial-profile-info">
+        <p class="name">Kristin Watson</p>
+        <p class="origin">Booking.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2 class="section-title capitalize">Our services</h2>
+    <div class="services-container">
+      <article class="services-card">
+        <div class="img-services">
+          <img src="./assets/services-section/icons/1.svg" alt="User inteface design icon">
+        </div>
+        <h4 class="capitalize">User inteface design</h4>
+        <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
+        <a class="learn-more" href="#">Learn more</a>
+      </article>
+      <article class="services-card">
+        <div class="img-services">
+          <img src="./assets/services-section/icons/2.svg" alt="User experience design icon">
+        </div>
+        <h4 class="capitalize">User experience design</h4>
+        <p>Circle always focuses on delivering the best user experience to your customers.</p>
+        <a class="learn-more" href="#">Learn more</a>
+      </article>
+      <article class="services-card">
+        <div class="img-services">
+          <img src="./assets/services-section/icons/3.svg" alt="Application development icon">
+        </div>
+        <h4 class="capitalize">Application development</h4>
+        <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
+        <a class="learn-more" href="#">Learn more</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Do you have any questions?</h2>
+    <h3>Let us help you!</h3>
+    <form action="">
+      <input id="email" name="email" type="email" placeholder="Enter your email">
+      <!-- <a class="newsletter-subscribe" href="./pages/contact.html"> -->
+      <button type="submit" class="blue-button submit-button">Suscribe</button>
+
+      <!-- </a> -->
+    </form>
+  </section>
+
+  <footer-component>
+    <style>
+      /* --- DEFAULT DESIGN: SMARTPHONE --- */
+
+      .footer {
+        margin-bottom: 50px;
+      }
+
+      .footer p,
+      .footer a {
+        color: var(--neutralMedium);
+        font-weight: normal;
+      }
+
+      .address-info p {
+        margin: 20px 0;
+      }
+
+      .sitemap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 17px;
+        list-style: none;
+      }
+
+      .sitemap li {
+        margin: 20px 0;
+      }
+
+      .sitemap a:hover {
+        color: var(--Primary);
+        text-decoration: underline;
+      }
+
+      .address-info-logo {
+        text-align: left;
+      }
+
+      /* --- TABLET ADJUSTMENTS --- */
+
+      @media (min-width: 768px) {
+        .footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        .footer .logo {
+          margin-bottom: 20px;
+        }
+
+        .footer p {
+          text-align: left;
+        }
+
+        .address-info p {
+          margin: 30px 0;
+        }
+
+        .address-info {
+          text-align: left;
+        }
+
+        .sitemap {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .sitemap li {
+          flex: 0 32%;
+          height: 60px;
+          margin-bottom: 2%;
+        }
+      }
+    </style>
+    <footer class="footer">
+      <div class="address-info">
+        <a class="address-info-logo" href="/">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo">
+        </a>
+        <p>
+          2972 Westheimer Rd. Santa Ana,
+          <br>
+          Illinois 85486
+        </p>
+      </div>
+      <ul class="sitemap">
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
+  </footer-component>
+
+  <div classname="scroll-to-top">
+    <span class="fa fa-arrow-up btn-scroll btn-scroll-position btn-scroll-style" style="visibility: visible;"></span>
+  </div>
 
 </body>
 
