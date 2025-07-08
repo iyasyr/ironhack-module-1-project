@@ -201,6 +201,12 @@ small {
   color: var(--SecondaryDark);
 }
 
+.secondary-button:hover {
+  text-decoration: underline;
+  color: var(--Primary);
+  text-underline-offset: 1px;
+}
+
 /* Common Classes */
 .capitalize {
   text-transform: capitalize;
@@ -290,4 +296,51 @@ small {
   left: auto;
   right: -15%;
   bottom: -15%;
+}
+
+
+/* Clients section */
+
+/* .clients-logos {} */
+
+
+.clients {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+
+  .clients,
+  .services,
+  .recent-projects {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .clients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 150px;
+    margin-bottom: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .clients {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.img-client {
+  margin: 0 auto;
+  filter: grayscale(1);
+}
+
+.img-client:hover {
+  filter: grayscale(0);
 }
