@@ -12,7 +12,7 @@ class RandomProjects extends HTMLElement {
       const shuffled = filtered.sort(() => Math.random() - 0.5).slice(0, 3);
       this.querySelector('.projects-container').innerHTML = shuffled.map(p => `
         <article class="project-card">
-          <a class="project-wrapper" href="./pages/projects.html?id=${p.uuid}">
+          <a class="project-wrapper" href="/projects/1.html?id=${p.uuid}">
             <img class="img-project" src="https://github.com/ironhack-jc/mid-term-api/blob/main/${p.uuid}.jpg?raw=true" alt="${p.name}">
             <div class="project-inner-card">
               <h4 class="project-title">${p.name}</h4>
