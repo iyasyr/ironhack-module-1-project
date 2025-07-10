@@ -39,7 +39,13 @@ class ProjectDetails extends HTMLElement {
       <article class="full-description project-description">
         ${project.content}
       </article>
-    ;`
+
+      <section id="projects" class="recent-projects">
+        <h2 class="section-title capitalize">Other projects</h2>
+        <random-projects exclude=${project.uuid}></random-projects>
+      </section>
+
+    `
       } catch (err) {
       showError.call(this, "Oops! Something went wrong. Please try again later.");
       console.error(err);

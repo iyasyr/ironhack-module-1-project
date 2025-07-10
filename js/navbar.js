@@ -13,9 +13,12 @@ class MainNavbar extends HTMLElement {
             <li><a href="/" class="menu-item">Home</a></li>
             <li><a href="/#projects" class="menu-item">Projects</a></li>
             <li><a href="/#services" class="menu-item">Services</a></li>
+            <li class="mobile-contact-btn">
+              <a href="/contact/contact-us.html" class="menu-item">Contact Us</a>
+            </li>
           </ul>
           <div class="btn">
-            <a href="./pages/contact.html" class="btn blue-button">Contact Us</a>
+            <a href="/contact/contact-us.html" class="btn blue-button">Contact Us</a>
           </div>
         </nav>
       </div>

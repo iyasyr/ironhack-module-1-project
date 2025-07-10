@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Circle Agency - Home</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <script type="module" src="./js/script.js" defer></script>
-  <script src="./js/navbar.js" defer></script>
-  <script src="./js/form-handler.js" defer></script>
-  <script src="./js/footer.js" defer></script>
-  <script src="./js/three-random-projects.js" defer></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/form-handler.js" defer></script>
+  <script src="/js/footer.js" defer></script>
+  <script src="/js/newsletter-form.js" defer></script>
+  <script src="/js/three-random-projects.js" defer></script>
+  <script src="/js/scroll-to-top-button.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,7 +61,6 @@
   </section>
 
   <!-- Three Random Projects Section -->
-  <div id="three-random-projects"></div>
   <section id="projects" class="recent-projects">
     <h2 class="section-title capitalize">Recent projects</h2>
     <random-projects></random-projects>
@@ -123,23 +123,14 @@
     </div>
   </section>
 
-  <section class="newsletter">
-    <h2>Do you have any questions?</h2>
-    <h3>Let us help you!</h3>
+  <!-- Newsletter Section -->
+  <newsletter-form></newsletter-form>
 
-    <form id="newsletter-form" novalidate>
-      <input id="email" name="email" type="email" placeholder="Enter your email" required autocomplete="email"
-        aria-label="Email address">
-      <button type="submit" class="blue-button submit-button">Subscribe</button>
-      <span id="email-error" style="color: #b33a3a; display: none; font-size: 0.9em;"></span>
-    </form>
-  </section>
-
+  <!-- Footer -->
   <footer-component></footer-component>
 
-  <div classname="scroll-to-top">
-    <span class="fa fa-arrow-up btn-scroll btn-scroll-position btn-scroll-style" style="visibility: visible;"></span>
-  </div>
+  <!-- Scroll to top button -->
+  <scroll-to-top></scroll-to-top>
 
 </body>
 
