@@ -30,15 +30,15 @@ class ContactForm extends HTMLElement {
             <button type="submit" id="submitForm" class="contact-us-submit-button">Submit</button>
             <p class="errorForm" id="errorSubmit" style="border-color: red; display:none;">PLEASE, REVIEW THE REQUIRED FIELDS</p>
         </div>
+        </form>
         <div class="custom-modal" id="modal">
           <div class="custom-modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            <button class="modal-close" id="modal-close" type='button' aria-label="Close">&times;</button>
             <div class="modal-title">Thank you for subscribing!</div>
             <div class="modal-text">We will contact you as soon as possible.</div>
           </div>
         </div>
-      </form>
-    `;
+        `;
 
     // ---- ELEMENTS ----
     const form = this.querySelector("#form-container");
@@ -153,14 +153,6 @@ class ContactForm extends HTMLElement {
       e.preventDefault(); // Prevent actual form submission for demo
       errorSubmit.style.display = "none";
 
-      // Collect form results
-      const resultMsg = 
-        `Thank you for contacting us!\n\n` +
-        `Name: ${nameInput.value}\n` +
-        `Email: ${emailInput.value}\n` +
-        `Phone: ${phoneInput.value}\n` +
-        `Message: ${messageInput.value}`;
-
       modal.style.display = "flex";
       
       form.reset();
@@ -169,16 +161,6 @@ class ContactForm extends HTMLElement {
     // Close modal on X or background click
     modalClose.addEventListener("click", () => {
       modal.style.display = "none";
-    });
-
-    modalClose.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
-        modal.style.display = "none";
-      }
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.style.display = "none";
     });
   }
 }
