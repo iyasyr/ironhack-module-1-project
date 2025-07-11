@@ -30,9 +30,11 @@ class ContactForm extends HTMLElement {
             <button type="submit" id="submitForm" class="contact-us-submit-button">Submit</button>
             <p class="errorForm" id="errorSubmit" style="border-color: red; display:none;">PLEASE, REVIEW THE REQUIRED FIELDS</p>
         </div>
-        <div class="modal" style="display:none;">
-          <div class="modal-content">
-              <h4>Thank you! Your form has been sent successfully!!</h4>
+        <div class="custom-modal" id="modal">
+          <div class="custom-modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-title">Thank you for subscribing!</div>
+            <div class="modal-text">We will contact you as soon as possible.</div>
           </div>
         </div>
       </form>
@@ -52,7 +54,8 @@ class ContactForm extends HTMLElement {
     const errorPhone = this.querySelector("#errorPhone");
     const errorMessageUser = this.querySelector("#errorMessageUser");
     const errorSubmit = this.querySelector("#errorSubmit");
-    const modal = this.querySelector(".modal");
+    const modal = this.querySelector("#modal");
+    const modalClose = this.querySelector("#modal-close");
 
     // ---- VALIDATION FUNCTIONS ----
     function setValidationClass(input, isValid) {
@@ -158,18 +161,24 @@ class ContactForm extends HTMLElement {
         `Phone: ${phoneInput.value}\n` +
         `Message: ${messageInput.value}`;
 
-      alert(resultMsg);
-
-      // Show modal (optional)
-      modal.style.display = "block";
+      modal.style.display = "flex";
+      
       form.reset();
     });
 
-    // Optional: Close modal when clicking outside
-    window.addEventListener("click", (event) => {
-      if (event.target === modal) {
+    // Close modal on X or background click
+    modalClose.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    modalClose.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
         modal.style.display = "none";
       }
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
     });
   }
 }
