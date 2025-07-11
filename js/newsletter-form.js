@@ -1,7 +1,7 @@
 class NewsletterForm extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section class="newsletter">
+      <section class="newsletter" id="newsletter">
         <h2>Do you have any questions?</h2>
         <h3>Let us help you!</h3>
         <form id="newsletter-form" novalidate>
