@@ -10,6 +10,7 @@ class NewsletterForm extends HTMLElement {
             <button type="submit" class="blue-button submit-button">Subscribe</button>
             <span id="email-error" class="email-error"></span>
         </form>
+        </section>
         <div class="custom-modal" id="newsletter-modal">
           <div class="custom-modal-content">
             <button class="modal-close" id="newsletter-modal-close" aria-label="Close">&times;</button>
@@ -17,7 +18,6 @@ class NewsletterForm extends HTMLElement {
             <div class="modal-text">We will contact you as soon as possible.</div>
           </div>
         </div>
-      </section>
     `;
 
     const form = this.querySelector("#newsletter-form");
@@ -57,16 +57,6 @@ class NewsletterForm extends HTMLElement {
     // Close modal on X or background click
     modalClose.addEventListener("click", () => {
       modal.style.display = "none";
-    });
-
-    modalClose.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
-        modal.style.display = "none";
-      }
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.style.display = "none";
     });
   }
 }
